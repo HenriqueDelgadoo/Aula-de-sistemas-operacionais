@@ -1,0 +1,74 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Container to center content */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #16a085;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Paragraph Styling */
+p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Make the text more readable */
+ul li {
+    font-size: 15px;
+    color: #34495e;
+}
+
+/* Link styling if any */
+a {
+    color: #1abc9c;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
