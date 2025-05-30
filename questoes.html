@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADES TEÓRICAS - WINDOWS, LINUX E SEGURANÇA CIBERNÉTICA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            border-left: 5px solid #3498db;
+            padding-left: 10px;
+            margin-top: 30px;
+        }
+        .task {
+            background-color: white;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .comparison-table {
+            margin: 20px 0;
+        }
+        .advantages, .disadvantages {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .advantages {
+            background-color: #e8f8f5;
+            border-left: 5px solid #2ecc71;
+        }
+        .disadvantages {
+            background-color: #fdedec;
+            border-left: 5px solid #e74c3c;
+        }
+        .highlight {
+            background-color: #fffde7;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>ATIVIDADES TEÓRICAS COM FOCO EM WINDOWS E LINUX E SEGURANÇA CIBERNÉTICA</h1>
+
+    <div class="task">
+        <h2>1. Definindo os Paradigmas: Código Aberto vs. Fechado</h2>
+        <h3>Sistema Operacional de Código Aberto (Open Source)</h3>
+        <p><strong>Definição:</strong> Um sistema operacional cujo código-fonte é disponibilizado publicamente, permitindo que qualquer pessoa veja, modifique e redistribua o software.</p>
+        
+        <div class="advantages">
+            <strong>Vantagens:</strong>
+            <ol>
+                <li><strong>Customização:</strong> Permite alterações no sistema conforme necessidade.</li>
+                <li><strong>Gratuito:</strong> Não requer licença paga na maioria dos casos.</li>
+            </ol>
+        </div>
+        
+        <div class="disadvantages">
+            <strong>Desvantagens:</strong>
+            <ol>
+                <li><strong>Suporte limitado:</strong> Depende da comunidade ou empresas terceirizadas.</li>
+                <li><strong>Curva de aprendizado:</strong> Pode ser complexo para usuários iniciantes.</li>
+            </ol>
+        </div>
+        
+        <p><strong>Exemplos:</strong> Linux (Ubuntu, Fedora), FreeBSD, Android (baseado em Linux)</p>
+
+        <h3>Sistema Operacional de Código Fechado (Proprietário)</h3>
+        <p><strong>Definição:</strong> Um sistema operacional cujo código-fonte não é acessível ao público, sendo controlado por uma empresa.</p>
+        
+        <div class="advantages">
+            <strong>Vantagens:</strong>
+            <ol>
+                <li><strong>Suporte oficial:</strong> Atendimento direto da empresa desenvolvedora.</li>
+                <li><strong>Facilidade de uso:</strong> Interface mais amigável para usuários comuns.</li>
+            </ol>
+        </div>
+        
+        <div class="disadvantages">
+            <strong>Desvantagens:</strong>
+            <ol>
+                <li><strong>Custo:</strong> Geralmente requer compra de licença.</li>
+                <li><strong>Restrições de personalização:</strong> Não permite modificações profundas.</li>
+            </ol>
+        </div>
+        
+        <p><strong>Exemplos:</strong> Windows, macOS, iOS</p>
+    </div>
+
+    <div class="task">
+        <h2>2. Análise Comparativa de Instalação</h2>
+        
+        <div class="comparison-table">
+            <table>
+                <tr>
+                    <th>Aspecto</th>
+                    <th>Windows (Código Fechado)</th>
+                    <th>Ubuntu (Código Aberto)</th>
+                </tr>
+                <tr>
+                    <td><strong>Licenciamento</strong></td>
+                    <td>Requer chave de ativação.</td>
+                    <td>Gratuito, sem licença.</td>
+                </tr>
+                <tr>
+                    <td><strong>Personalização</strong></td>
+                    <td>Poucas opções de customização.</td>
+                    <td>Permite escolher particionamento e pacotes.</td>
+                </tr>
+                <tr>
+                    <td><strong>Drivers</strong></td>
+                    <td>Geralmente instalados automaticamente.</td>
+                    <td>Pode exigir instalação manual de drivers proprietários.</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="task">
+        <h2>3. Debate: Modo Texto vs. Interface Gráfica</h2>
+        
+        <h3>Modo Texto (CLI - Terminal)</h3>
+        <div class="advantages">
+            <strong>Vantagens:</strong>
+            <ul>
+                <li>Mais rápido para tarefas repetitivas.</li>
+                <li>Consome menos recursos do sistema.</li>
+                <li>Permite automação via scripts.</li>
+            </ul>
+        </div>
+        
+        <div class="disadvantages">
+            <strong>Desvantagens:</strong>
+            <ul>
+                <li>Curva de aprendizado mais acentuada.</li>
+                <li>Menos intuitivo para usuários comuns.</li>
+            </ul>
+        </div>
+        
+        <p><strong>Cenários indicados:</strong> Administração de servidores, tarefas de rede, automação.</p>
+
+        <h3>Interface Gráfica (GUI)</h3>
+        <div class="advantages">
+            <strong>Vantagens:</strong>
+            <ul>
+                <li>Facilidade de uso (arrastar, clicar).</li>
+                <li>Visualização intuitiva de arquivos e programas.</li>
+            </ul>
+        </div>
+        
+        <div class="disadvantages">
+            <strong>Desvantagens:</strong>
+            <ul>
+                <li>Consome mais memória e CPU.</li>
+                <li>Menos eficiente para tarefas avançadas.</li>
+            </ul>
+        </div>
+        
+        <p><strong>Cenários indicados:</strong> Uso doméstico, edição de imagens/vídeos, navegação web.</p>
+    </div>
+
+    <div class="task">
+        <h2>4. Estruturas de Diretórios: Windows vs. Linux</h2>
+        
+        <div class="comparison-table">
+            <table>
+                <tr>
+                    <th>Windows</th>
+                    <th>Linux</th>
+                    <th>Finalidade</th>
+                </tr>
+                <tr>
+                    <td><code>C:\Windows</code></td>
+                    <td><code>/bin</code></td>
+                    <td>Arquivos essenciais do sistema.</td>
+                </tr>
+                <tr>
+                    <td><code>C:\Program Files</code></td>
+                    <td><code>/usr/bin</code></td>
+                    <td>Programas instalados.</td>
+                </tr>
+                <tr>
+                    <td><code>C:\Users</code></td>
+                    <td><code>/home</code></td>
+                    <td>Arquivos de usuários.</td>
+                </tr>
+                <tr>
+                    <td><code>C:\System32</code></td>
+                    <td><code>/etc</code></td>
+                    <td>Configurações do sistema.</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="task">
+        <h2>5. Modelos de Usuários e Permissões</h2>
+        
+        <h3>Gerenciamento de Usuários</h3>
+        <ul>
+            <li><strong>Windows (NTFS):</strong>
+                <ul>
+                    <li>Usa contas de usuário (Admin, Usuário Padrão).</li>
+                    <li>Permissões baseadas em ACLs (Listas de Controle de Acesso).</li>
+                </ul>
+            </li>
+            <li><strong>Linux (rwx):</strong>
+                <ul>
+                    <li>Usuários e grupos (<code>chmod</code>, <code>chown</code>).</li>
+                    <li>Permissões em formato <span class="highlight">rwx</span> (leitura, escrita, execução).</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Comparação</h3>
+        <div class="comparison-table">
+            <table>
+                <tr>
+                    <th>Sistema</th>
+                    <th>Permissões</th>
+                    <th>Exemplo</th>
+                </tr>
+                <tr>
+                    <td><strong>Windows</strong></td>
+                    <td><code>Full Control</code>, <code>Modify</code>, <code>Read</code></td>
+                    <td><code>icacls arquivo.txt /grant User:F</code></td>
+                </tr>
+                <tr>
+                    <td><strong>Linux</strong></td>
+                    <td><code>chmod 755 script.sh</code> (rwxr-xr-x)</td>
+                    <td><code>sudo chown user:grupo arquivo</code></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="task">
+        <h2>6. O Processo de Boot: Do Power-On ao Desktop</h2>
+        
+        <h3>Etapas do Boot</h3>
+        <ol>
+            <li><strong>POST (Power-On Self-Test):</strong> Verificação de hardware.</li>
+            <li><strong>BIOS/UEFI:</strong> Inicializa o firmware e identifica o dispositivo de boot.</li>
+            <li><strong>Carregamento do Bootloader:</strong>
+                <ul>
+                    <li><strong>Windows:</strong> <code>bootmgr</code> → Carrega o kernel (<code>ntoskrnl.exe</code>).</li>
+                    <li><strong>Linux:</strong> <code>GRUB</code> → Carrega o kernel (<code>vmlinuz</code>).</li>
+                </ul>
+            </li>
+            <li><strong>Inicialização do Kernel:</strong> Monta sistemas de arquivos e inicia serviços.</li>
+            <li><strong>Gerenciador de Login:</strong> Exibe tela de usuário (Windows: <code>winlogon</code>, Linux: <code>GDM</code>/<code>LightDM</code>).</li>
+        </ol>
+
+        <h3>Diferenças entre Código Aberto e Fechado</h3>
+        <ul>
+            <li><strong>Windows:</strong> Processo mais automatizado, menos visível ao usuário.</li>
+            <li><strong>Linux:</strong> Maior controle sobre o boot (GRUB permite selecionar kernels diferentes).</li>
+        </ul>
+    </div>
+
+    <div style="text-align: center; margin-top: 30px; padding: 15px; background-color: #e3f2fd; border-radius: 5px;">
+        <h3>Conclusão</h3>
+        <p>Este material fornece uma visão prática e comparativa entre Windows e Linux, abrangendo instalação, estrutura de diretórios, permissões e boot. Esses conhecimentos são essenciais para administração de sistemas e segurança cibernética. 🚀</p>
+    </div><div class="task">
+    <h2>7. Redes: Compartilhamento, Mapeamento</h2>
+    
+    <h3>a) Unidades e Pastas em Rede</h3>
+    <p><strong>Definição:</strong> São recursos compartilhados em uma rede local que permitem o acesso remoto a arquivos e diretórios.</p>
+    <p><strong>Utilidade:</strong> Facilitam a colaboração entre usuários, centralizam armazenamento e permitem acesso a recursos sem necessidade de cópias locais.</p>
+    
+    <h3>b) Compartilhamento e Acesso</h3>
+    <div class="comparison-table">
+        <table>
+            <tr>
+                <th>Termo</th>
+                <th>Definição</th>
+            </tr>
+            <tr>
+                <td><strong>Compartilhamento</strong></td>
+                <td>Processo de disponibilizar recursos (pastas, impressoras) para outros usuários na rede</td>
+            </tr>
+            <tr>
+                <td><strong>Acesso</strong></td>
+                <td>Permissões concedidas para utilização dos recursos compartilhados (leitura, gravação, etc.)</td>
+            </tr>
+        </table>
+    </div>
+    
+    <h3>c) Mapeamento de Unidades de Rede</h3>
+    <p>Atribuição de uma letra de unidade (ex: Z:) a um recurso compartilhado na rede, permitindo acesso como se fosse um disco local.</p>
+    
+    <div class="advantages">
+        <strong>Exemplo Prático:</strong>
+        <ol>
+            <li>No Windows Explorer, clique com o botão direito em "Este Computador" → "Mapear unidade de rede"</li>
+            <li>Digite o caminho da pasta compartilhada: <code>\\servidor\documentos</code></li>
+            <li>Selecione a letra da unidade (ex: Z:)</li>
+            <li>Agora você pode acessar os arquivos remotos como se estivessem no seu computador</li>
+        </ol>
+    </div>
+</div>
+
+<div class="task">
+    <h2>8. Fundamentos de Segurança Cibernética</h2>
+    
+    <h3>a) Definição de Segurança Cibernética</h3>
+    <p>Conjunto de práticas, tecnologias e processos para proteger sistemas, redes e dados contra ataques digitais, danos ou acesso não autorizado.</p>
+    
+    <h3>b) 5 Ameaças Cibernéticas Comuns</h3>
+    <div class="comparison-table">
+        <table>
+            <tr>
+                <th>Ameaça</th>
+                <th>Descrição</th>
+            </tr>
+            <tr>
+                <td>Malware</td>
+                <td>Software malicioso (vírus, ransomware) que infecta sistemas</td>
+            </tr>
+            <tr>
+                <td>Phishing</td>
+                <td>Tentativas de enganar usuários para obter informações sensíveis</td>
+            </tr>
+            <tr>
+                <td>Ataques DDoS</td>
+                <td>Sobrecarga de servidores com tráfego falso</td>
+            </tr>
+            <tr>
+                <td>Exploits</td>
+                <td>Aproveitamento de vulnerabilidades em softwares</td>
+            </tr>
+            <tr>
+                <td>Man-in-the-Middle</td>
+                <td>Interceptação de comunicações entre duas partes</td>
+            </tr>
+        </table>
+    </div>
+    
+    <h3>c) Vulnerabilidades em Sistemas</h3>
+    <p>Fraquezas ou falhas em softwares, hardwares ou processos que podem ser exploradas por atacantes para comprometer a segurança.</p>
+    
+    <h3>d) Credenciais e sua Importância</h3>
+    <p>Dados de autenticação (usuário/senha, certificados digitais) que comprovam identidade. Sua proteção é crucial pois são a "chave" para acessos privilegiados.</p>
+    
+    <h3>e) Engenharia Social</h3>
+    <p>Técnicas psicológicas para manipular pessoas e obter informações confidenciais ou acesso a sistemas.</p>
+    <div class="disadvantages">
+        <strong>Exemplos:</strong>
+        <ol>
+            <li>E-mail fingindo ser do suporte técnico pedindo sua senha</li>
+            <li>Ligação telefônica se passando por colega de trabalho solicitando dados</li>
+        </ol>
+    </div>
+</div>
+
+<div class="task">
+    <h2>9. Métodos de Proteção e Prevenção</h2>
+    
+    <h3>Medidas para Usuários</h3>
+    <ul>
+        <li>Atualização regular de sistemas e aplicativos</li>
+        <li>Uso de autenticação multifator</li>
+        <li>Backups periódicos dos dados importantes</li>
+        <li>Criptografia de dados sensíveis</li>
+        <li>Não reutilizar senhas entre serviços</li>
+    </ul>
+    
+    <h3>Medidas para Administradores</h3>
+    <ul>
+        <li>Implementação de políticas de segurança</li>
+        <li>Segmentação de redes</li>
+        <li>Monitoramento contínuo (SIEM)</li>
+        <li>Controle de privilégios (princípio do menor privilégio)</li>
+        <li>Testes de penetração regulares</li>
+    </ul>
+    
+    <h3>Função do Firewall Nativo</h3>
+    <p>Filtra tráfego de rede com base em regras pré-definidas, bloqueando conexões suspeitas e permitindo apenas comunicações autorizadas. Atua como primeira linha de defesa.</p>
+</div>
+
+<div class="task">
+    <h2>10. Configuração Crítica do Sistema</h2>
+    
+    <div class="comparison-table">
+        <table>
+            <tr>
+                <th>Área de Configuração</th>
+                <th>Importância</th>
+                <th>Exemplo</th>
+            </tr>
+            <tr>
+                <td><strong>Gerenciamento de Usuários</strong></td>
+                <td>Controle de acessos e privilégios</td>
+                <td>Criar contas com privilégios mínimos necessários</td>
+            </tr>
+            <tr>
+                <td><strong>Configurações de Rede</strong></td>
+                <td>Segurança contra invasões</td>
+                <td>Desativar protocolos inseguros como SMBv1</td>
+            </tr>
+            <tr>
+                <td><strong>Atualizações Automáticas</strong></td>
+                <td>Correção de vulnerabilidades</td>
+                <td>Habilitar Windows Update/APT no Linux</td>
+            </tr>
+            <tr>
+                <td><strong>Configurações de Firewall</strong></td>
+                <td>Filtro de tráfego malicioso</td>
+                <td>Bloquear portas não essenciais</td>
+            </tr>
+            <tr>
+                <td><strong>Opções de Energia</strong></td>
+                <td>Desempenho vs. Economia</td>
+                <td>Ajustar para "Alto Desempenho" em servidores</td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="advantages">
+        <strong>Dica:</strong> Sempre documente alterações significativas na configuração do sistema para facilitar a reversão se necessário.
+    </div>
+</div>
+</body>
+</html>
